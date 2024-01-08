@@ -1,0 +1,16 @@
+[package]
+name = "counting_contract"
+version = "0.1.0"
+edition = "2021"
+
+#use -Rust optimizer for proper final binary
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+cosmwasm-std = "1.5.0"
+cw-storage-plus = "1.2.0"
+serde = { version = "1.0.195", features = ["derive"] }
+
+[dev-dependencies]
+cw-multi-test = "0.20.0"
